@@ -1,0 +1,72 @@
+# This is a Dialog sequence file
+# Define a set of Intents and run the "TestFlow" tool to execute the sequence from the command line
+# TIPS:
+#  You can toggle on or off various outputs by modifying the settings in testflow.js
+#  You can define a comment with the # sign
+#  You can prompt the user to type or confirm a Slot value by starting the line with a ?
+#  You can also define slot values with spaces using encoding. (%20)
+#   For example,   ? AnswerIntent usstate=New%20Jersey
+
+LaunchRequest
+AMAZON.YesIntent
+#? PlaceIntent Place=office
+AMAZON.YesIntent
+? ItemIntent Item=files
+AMAZON.YesIntent
+AMAZON.YesIntent
+? ActionIntent Action=water%20the%20plants
+AMAZON.YesIntent
+
+
+
+
+#LaunchRequest
+#CookIntent
+#IngredientsIntent
+#AMAZON.YesIntent
+#AMAZON.NextIntent
+#AMAZON.NextIntent
+#AMAZON.RepeatIntent
+#AMAZON.StopIntent
+#SessionEndedRequest
+
+# AMAZON.HelpIntent
+# AMAZON.NextIntent
+# AMAZON.NextIntent
+# AMAZON.NextIntent
+# AMAZON.NextIntent
+# AMAZON.NextIntent
+# AMAZON.NextIntent
+# AMAZON.NextIntent
+
+
+#1. New User no place existing.
+#LaunchRequest
+#AMAZON.NoIntent
+
+#2. Existing User no place existing.
+#LaunchRequest
+#AMAZON.NoIntent
+
+#3. Existing User add a default place.
+#LaunchRequest
+#AMAZON.YesIntent
+#? PlaceIntent Place=office
+#AMAZON.NoIntent
+
+#4. Existing User add a new place.
+
+#6. Existing User existing place just check items.
+#LaunchRequest
+#AMAZON.YesIntent
+#? PlaceIntent Place=office
+#AMAZON.NoIntent
+
+#7. New User add a default place.
+
+#8. New User add a new place.
+
+
+#java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
+#aws dynamodb list-tables --endpoint-url http://localhost:8000
+#lambda-local -l src/index.js -h handler -e test.json

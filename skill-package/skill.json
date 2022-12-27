@@ -1,0 +1,91 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "The skill acts as a last minute reminder for the items to carry with you. It also adds up as a packing companion for your tours and vacation.",
+          "examplePhrases": [
+            "Alexa, open Forget Me Not",
+            "Alexa, tell Forget Me Not, I am leaving for work",
+            "Alexa, tell Forget Me Not, I am going on date"
+          ],
+          "keywords": [
+            "reminder",
+            "forget",
+            "item",
+            "things",
+            "travel",
+            "trip",
+            "planner",
+            "assistant",
+            "manager",
+            "organizer",
+            "carry",
+            "checker"
+          ],
+          "name": "Forget Me Not",
+          "description": "Forget Me Not woks as last minute reminder for items to be carried along to your work place, sports practice or even on a date. Every one can the time we loose the key inside the house and lock ourselves out or forget to take along some important document when visiting bank. All those times all we needed was a nudge just before locking the door. Forget Me Not does exactly that, a gentle reminder to take along all your important things just before you leave the house, no matter where you are going. Full customization of the list of items is fully  corresponding to individual needs is inherent to the skill. You can add or remove individual or block of things as per your requirement. \nThe skill also adds up as travel plan companion by providing you with a list of important items to be taken along when planning a trip short or long. \nTo know the items to be carried along just say i am leaving followed by name of place. The skill will respond with a default list of items people normally carry with them. The list once included in your places can be customized as per your need. Just say edit items after launching the skill and it will ask for addition or deletion of items. Say add or remove followed by item name to do the customization. Multiple items can also be added or removed to the list by saying the name of items separated by \u0027AND\u0027.\nUse Forget Me Not just before leaving home and you will never forget any important items you need.",
+          "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
+          "largeIconUri": "file://assets/images/en-US_largeIconUri.png"
+        },
+        "en-IN": {
+          "summary": "The skill acts as a last minute reminder for the items to carry with you. It also adds up as a packing companion for your tours and vacation.",
+          "examplePhrases": [
+            "Alexa, open Forget Me Not",
+            "Alexa, tell Forget Me Not, I am leaving for work",
+            "Alexa, tell Forget Me Not, I am going to school"
+          ],
+          "keywords": [
+            "reminder",
+            "forget",
+            "item",
+            "things",
+            "travel",
+            "trip",
+            "planner",
+            "assistant",
+            "manager",
+            "organizer",
+            "carry"
+          ],
+          "name": "Forget Me Not",
+          "description": "Forget Me Not woks as last minute reminder for items to be carried along to your work place, sports practice or even on a date. Every one can the time we loose the key inside the house and lock ourselves out or forget to take along some important document when visiting bank. All those times all we needed was a nudge just before locking the door. Forget Me Not does exactly that, a gentle reminder to take along all your important things just before you leave the house, no matter where you are going. Full customization of the list of items is fully  corresponding to individual needs is inherent to the skill. You can add or remove individual or block of things as per your requirement. \nThe skill also adds up as travel plan companion by providing you with a list of important items to be taken along when planning a trip short or long. \nTo know the items to be carried along just say i am leaving followed by name of place. The skill will respond with a default list of items people normally carry with them. The list once included in your places can be customized as per your need. Just say edit items after launching the skill and it will ask for addition or deletion of items. Say add or remove followed by item name to do the customization. Multiple items can also be added or removed to the list by saying the name of items separated by \u0027AND\u0027.\nUse Forget Me Not just before leaving home and you will never forget any important items you need.",
+          "smallIconUri": "file://assets/images/en-IN_smallIconUri.png",
+          "largeIconUri": "file://assets/images/en-IN_largeIconUri.png"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "No permissions are required for this skill.\nFollowing Intent sequences can be used for testing the skill.\n1. Initial addition of a place.\nLaunchRequest\n? PlaceIntent Work\u003doffice\n\n2. Checking that the items are repeating\n? PlaceIntent Work\u003doffice\n\n3. Include another place\n? PlaceIntent Out\u003ddate\n\n4. Edit Items for a place\nEditItemIntent\n? PlaceIntent Work\u003doffice\n? AddItemIntent Item\u003dpen\nAMAZON.NoIntent\n\nThe skill uses a dynamoDB database to store the list of items with userId as key. The name of place if not included in the default places will be added to the user list with empty item list which is then modified as per requirement.\n\nDuring the first certification the skill returned an error when invoked with an empty slot value. By tweaking the slot validation I was able to resolve the issue with a graceful re-prompt. I was asked to reproduce following steps. Here they are:\nUser: \"Alexa, open forget me not\"\nSkill: \"Don\u0027t forget your ID and keys, as well as, wallet and cell phone. May I ask where are you going?\"\nUser: \"I am leaving for {}\"\nSkill: \"Sorry, I didn\u0027t get that. May I know where are you going?\"\nUser: \"I am leaving for office\"\nSkill: \"Please don\u0027t forget your, ....\"\n\nDuring the second certification the re-prompt after help was not audible. I was asked to reproduce following steps. Here they are:\n\nUser: \"Alexa open forget me not\"\nSkill: \" Don\u0027t forget your ID and keys, as well as, wallet and cell phone. May I ask where are you going? \"\nUser: \"help\"\nSkill: \"Just say the name of place you are going to know the list of items to carry. To add or remove items from your existing list say edit item list.\"\nUser does not provide any input.\nSkill: After few seconds, the skill provides a re-prompt \n\"Just say the name of place you are going to know the list of items to carry. To add or remove items from your existing list say edit item list.\"\nand the session remains open.\nIf user responds skill takes action accordingly otherwise SessionEndedRequest is called and session closes with a bye message.",
+      "category": "ORGANIZERS_AND_ASSISTANTS",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:686293343374:function:remindMe"
+        },
+        "interfaces": [
+          {
+            "type": "RENDER_TEMPLATE"
+          }
+        ]
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {
+          "privacyPolicyUrl": "http://arshad-location.blogspot.in/2018/03/privacy-policy.html?view\u003dmosaic"
+        },
+        "en-IN": {
+          "privacyPolicyUrl": "http://arshad-location.blogspot.in/2018/03/privacy-policy.html?view\u003dmosaic"
+        }
+      },
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}

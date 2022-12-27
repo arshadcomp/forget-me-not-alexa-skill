@@ -1,0 +1,967 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "forget me not",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "PlaceIntent",
+          "slots": [
+            {
+              "name": "Out",
+              "type": "Out"
+            },
+            {
+              "name": "Work",
+              "type": "Work"
+            },
+            {
+              "name": "YoungWork",
+              "type": "YoungWork"
+            },
+            {
+              "name": "Party",
+              "type": "Party"
+            },
+            {
+              "name": "Travel",
+              "type": "Travel"
+            },
+            {
+              "name": "UnlistedPlace",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "i am going {Travel}",
+            "i\u0027m leaving for {UnlistedPlace}",
+            "i\u0027m going {UnlistedPlace}",
+            "i\u0027m going to {UnlistedPlace}",
+            "i am leaving for {UnlistedPlace}",
+            "i am going {UnlistedPlace}",
+            "i am going to {UnlistedPlace}",
+            "we are leaving for {UnlistedPlace}",
+            "we are going {UnlistedPlace}",
+            "we are going to {UnlistedPlace}",
+            "{Party}",
+            "i\u0027m leaving for {Party}",
+            "i\u0027m going {Party}",
+            "i\u0027m going to {Party}",
+            "i am leaving for {Party}",
+            "i am going {Party}",
+            "i am going to {Party}",
+            "we are leaving for {Party}",
+            "we are going {Party}",
+            "we are going to {Party}",
+            "{YoungWork}",
+            "i\u0027m leaving for {YoungWork}",
+            "i\u0027m going {YoungWork}",
+            "i\u0027m going to {YoungWork}",
+            "i am leaving for {YoungWork}",
+            "i am going out for {YoungWork}",
+            "i am going for {YoungWork}",
+            "i am going {YoungWork}",
+            "i am going to {YoungWork}",
+            "we are leaving for {YoungWork}",
+            "we are going out for {YoungWork}",
+            "we are going for {YoungWork}",
+            "we are going {YoungWork}",
+            "we are going to {YoungWork}",
+            "{Work}",
+            "i\u0027m leaving for {Work}",
+            "i\u0027m going {Work}",
+            "i\u0027m going to {Work}",
+            "i am leaving for {Work}",
+            "i am going for {Work}",
+            "i am going {Work}",
+            "i am going to {Work}",
+            "we are leaving for {Work}",
+            "we are going out for {Work}",
+            "we are going for {Work}",
+            "we are going {Work}",
+            "we are going to {Work}",
+            "{Out}",
+            "i\u0027m leaving for {Out}",
+            "i\u0027m going {Out}",
+            "i\u0027m going to {Out}",
+            "i am leaving for {Out}",
+            "i am going out for {Out}",
+            "i am going for {Out}",
+            "i am going {Out}",
+            "i am going to {Out}",
+            "we are leaving for {Out}",
+            "we are going out for {Out}",
+            "we are going for {Out}",
+            "we are going {Out}",
+            "we are going to {Out}"
+          ]
+        },
+        {
+          "name": "AppointmentIntent",
+          "slots": [
+            {
+              "name": "Doctor",
+              "type": "Doctor"
+            }
+          ],
+          "samples": [
+            "we are leaving for {Doctor} appointment",
+            "to my {Doctor} appointment",
+            "to my {Doctor}",
+            "{Doctor} appointment",
+            "i am going for my {Doctor} appointment",
+            "i am leaving for {Doctor} appointment",
+            "i am going to {Doctor} appointment"
+          ]
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": []
+        },
+        {
+          "name": "AddItemIntent",
+          "slots": [
+            {
+              "name": "Item",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "insert {Item}",
+            "cover {Item}",
+            "put {Item}",
+            "take in {Item}",
+            "include {Item}",
+            "add {Item}"
+          ]
+        },
+        {
+          "name": "RemoveItemIntent",
+          "slots": [
+            {
+              "name": "Item",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "withdraw {Item}",
+            "pull off {Item}",
+            "discard {Item}",
+            "take out {Item}",
+            "delete {Item}",
+            "remove {Item}"
+          ]
+        },
+        {
+          "name": "EditItemIntent",
+          "samples": [
+            "customize items",
+            "customize item list",
+            "alter item",
+            "alter items",
+            "alter item list",
+            "modify item",
+            "modify items",
+            "modify item list",
+            "edit item",
+            "edit items",
+            "edit item list"
+          ]
+        },
+        {
+          "name": "AMAZON.MoreIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateSettingsIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageUpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollRightIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollLeftIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollUpIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "zither"
+              }
+            },
+            {
+              "name": {
+                "value": "xylophone"
+              }
+            },
+            {
+              "name": {
+                "value": "fiddle"
+              }
+            },
+            {
+              "name": {
+                "value": "violin"
+              }
+            },
+            {
+              "name": {
+                "value": "viola"
+              }
+            },
+            {
+              "name": {
+                "value": "tuba"
+              }
+            },
+            {
+              "name": {
+                "value": "trumpet"
+              }
+            },
+            {
+              "name": {
+                "value": "trombone"
+              }
+            },
+            {
+              "name": {
+                "value": "triangle"
+              }
+            },
+            {
+              "name": {
+                "value": "tambourine"
+              }
+            },
+            {
+              "name": {
+                "value": "synthesizer"
+              }
+            },
+            {
+              "name": {
+                "value": "sitar"
+              }
+            },
+            {
+              "name": {
+                "value": "saxophone"
+              }
+            },
+            {
+              "name": {
+                "value": "recorder"
+              }
+            },
+            {
+              "name": {
+                "value": "piano"
+              }
+            },
+            {
+              "name": {
+                "value": "pennywhistle"
+              }
+            },
+            {
+              "name": {
+                "value": "pan pipes"
+              }
+            },
+            {
+              "name": {
+                "value": "organ"
+              }
+            },
+            {
+              "name": {
+                "value": "oboe"
+              }
+            },
+            {
+              "name": {
+                "value": "marimba"
+              }
+            },
+            {
+              "name": {
+                "value": "lyre"
+              }
+            },
+            {
+              "name": {
+                "value": "lute"
+              }
+            },
+            {
+              "name": {
+                "value": "jew\u0027s harp"
+              }
+            },
+            {
+              "name": {
+                "value": "hurdy gurdy"
+              }
+            },
+            {
+              "name": {
+                "value": "harpsichord"
+              }
+            },
+            {
+              "name": {
+                "value": "harp"
+              }
+            },
+            {
+              "name": {
+                "value": "electric guitar"
+              }
+            },
+            {
+              "name": {
+                "value": "guitar"
+              }
+            },
+            {
+              "name": {
+                "value": "gong"
+              }
+            },
+            {
+              "name": {
+                "value": "french horn"
+              }
+            },
+            {
+              "name": {
+                "value": "flute"
+              }
+            },
+            {
+              "name": {
+                "value": "dulcimer"
+              }
+            },
+            {
+              "name": {
+                "value": "timpani"
+              }
+            },
+            {
+              "name": {
+                "value": "snare drum"
+              }
+            },
+            {
+              "name": {
+                "value": "bongo"
+              }
+            },
+            {
+              "name": {
+                "value": "bongo drum"
+              }
+            },
+            {
+              "name": {
+                "value": "bass drum"
+              }
+            },
+            {
+              "name": {
+                "value": "drum"
+              }
+            },
+            {
+              "name": {
+                "value": "double bass"
+              }
+            },
+            {
+              "name": {
+                "value": "cymbal"
+              }
+            },
+            {
+              "name": {
+                "value": "clarinet"
+              }
+            },
+            {
+              "name": {
+                "value": "cello"
+              }
+            },
+            {
+              "name": {
+                "value": "bassoon"
+              }
+            },
+            {
+              "name": {
+                "value": "banjo"
+              }
+            },
+            {
+              "name": {
+                "value": "Bagpipes"
+              }
+            },
+            {
+              "name": {
+                "value": "Accordion"
+              }
+            }
+          ],
+          "name": "MusicalInstrument"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "shrink\u0027s"
+              }
+            },
+            {
+              "name": {
+                "value": "doctor\u0027s"
+              }
+            },
+            {
+              "name": {
+                "value": "shrink"
+              }
+            },
+            {
+              "name": {
+                "value": "doctor"
+              }
+            },
+            {
+              "name": {
+                "value": "urologist"
+              }
+            },
+            {
+              "name": {
+                "value": "surgeon"
+              }
+            },
+            {
+              "name": {
+                "value": "radiologist"
+              }
+            },
+            {
+              "name": {
+                "value": "plastic surgeon"
+              }
+            },
+            {
+              "name": {
+                "value": "pediatrician"
+              }
+            },
+            {
+              "name": {
+                "value": "pathology"
+              }
+            },
+            {
+              "name": {
+                "value": "pathologist"
+              }
+            },
+            {
+              "name": {
+                "value": "osteopath"
+              }
+            },
+            {
+              "name": {
+                "value": "ophthalmologist"
+              }
+            },
+            {
+              "name": {
+                "value": "optho"
+              }
+            },
+            {
+              "name": {
+                "value": "oncologist"
+              }
+            },
+            {
+              "name": {
+                "value": "gynecologist "
+              }
+            },
+            {
+              "name": {
+                "value": "obstetrician"
+              }
+            },
+            {
+              "name": {
+                "value": "nephrologist "
+              }
+            },
+            {
+              "name": {
+                "value": "physician"
+              }
+            },
+            {
+              "name": {
+                "value": "dermatologist"
+              }
+            },
+            {
+              "name": {
+                "value": "cardiologist"
+              }
+            },
+            {
+              "name": {
+                "value": "physio"
+              }
+            },
+            {
+              "name": {
+                "value": "physiotherapist"
+              }
+            },
+            {
+              "name": {
+                "value": "heart specialist"
+              }
+            },
+            {
+              "name": {
+                "value": "psychiatrist"
+              }
+            },
+            {
+              "name": {
+                "value": "hospital"
+              }
+            },
+            {
+              "name": {
+                "value": "counselor"
+              }
+            }
+          ],
+          "name": "Doctor"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "laundry",
+                "synonyms": [
+                  "laundromat"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "gym",
+                "synonyms": [
+                  "fitness club",
+                  "health club"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "sleepover",
+                "synonyms": [
+                  "pajama party"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "date",
+                "synonyms": [
+                  "fancy place",
+                  "someplace romantic",
+                  "romantic date"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "friend\u0027s home",
+                "synonyms": [
+                  "hangout",
+                  "friend\u0027s"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "playground"
+              }
+            },
+            {
+              "name": {
+                "value": "daily walk"
+              }
+            },
+            {
+              "name": {
+                "value": "stroll"
+              }
+            },
+            {
+              "name": {
+                "value": "walk"
+              }
+            },
+            {
+              "name": {
+                "value": "park"
+              }
+            },
+            {
+              "name": {
+                "value": "amusement park"
+              }
+            },
+            {
+              "name": {
+                "value": "ride"
+              }
+            },
+            {
+              "name": {
+                "value": "long drive"
+              }
+            },
+            {
+              "name": {
+                "value": "drive"
+              }
+            },
+            {
+              "name": {
+                "value": "play"
+              }
+            },
+            {
+              "name": {
+                "value": "concert"
+              }
+            },
+            {
+              "name": {
+                "value": "drama"
+              }
+            },
+            {
+              "name": {
+                "value": "movie"
+              }
+            },
+            {
+              "name": {
+                "value": "shop"
+              }
+            },
+            {
+              "name": {
+                "value": "shopping"
+              }
+            },
+            {
+              "name": {
+                "value": "mall"
+              }
+            },
+            {
+              "name": {
+                "value": "cafe"
+              }
+            },
+            {
+              "name": {
+                "value": "dinner"
+              }
+            },
+            {
+              "name": {
+                "value": "snacks"
+              }
+            },
+            {
+              "name": {
+                "value": "lunch"
+              }
+            },
+            {
+              "name": {
+                "value": "brunch"
+              }
+            },
+            {
+              "name": {
+                "value": "breakfast"
+              }
+            },
+            {
+              "name": {
+                "value": "restaurant"
+              }
+            }
+          ],
+          "name": "Out"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "anniversary"
+              }
+            },
+            {
+              "name": {
+                "value": "fuenral"
+              }
+            },
+            {
+              "name": {
+                "value": "housewarming"
+              }
+            },
+            {
+              "name": {
+                "value": "wedding"
+              }
+            },
+            {
+              "name": {
+                "value": "engagement"
+              }
+            },
+            {
+              "name": {
+                "value": "birthday"
+              }
+            },
+            {
+              "name": {
+                "value": "baby shower"
+              }
+            },
+            {
+              "name": {
+                "value": "bachelorette party"
+              }
+            },
+            {
+              "name": {
+                "value": "bachelor party"
+              }
+            },
+            {
+              "name": {
+                "value": "homecoming"
+              }
+            },
+            {
+              "name": {
+                "value": "slumber party"
+              }
+            },
+            {
+              "name": {
+                "value": "beach party"
+              }
+            },
+            {
+              "name": {
+                "value": "cruise party"
+              }
+            },
+            {
+              "name": {
+                "value": "house party"
+              }
+            }
+          ],
+          "name": "Party"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "shop"
+              }
+            },
+            {
+              "name": {
+                "value": "factory"
+              }
+            },
+            {
+              "name": {
+                "value": "work"
+              }
+            },
+            {
+              "name": {
+                "value": "bank"
+              }
+            },
+            {
+              "name": {
+                "value": "office"
+              }
+            }
+          ],
+          "name": "Work"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "viva",
+                "synonyms": [
+                  "viva voce"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "tution"
+              }
+            },
+            {
+              "name": {
+                "value": "exams",
+                "synonyms": [
+                  "practical",
+                  "practicals"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "university"
+              }
+            },
+            {
+              "name": {
+                "value": "college"
+              }
+            },
+            {
+              "name": {
+                "value": "school"
+              }
+            },
+            {
+              "name": {
+                "value": "nursery",
+                "synonyms": [
+                  "creche",
+                  "pre-school",
+                  "pre school"
+                ]
+              }
+            }
+          ],
+          "name": "YoungWork"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "tour",
+                "synonyms": [
+                  "official tour"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "out of state"
+              }
+            },
+            {
+              "name": {
+                "value": "vacation"
+              }
+            },
+            {
+              "name": {
+                "value": "abroad",
+                "synonyms": [
+                  "out of country"
+                ]
+              }
+            }
+          ],
+          "name": "Travel"
+        }
+      ]
+    }
+  },
+  "version": "1"
+}

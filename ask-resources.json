@@ -1,0 +1,11 @@
+{
+  "askToolkitResourcesVersion": "2020-04-15",
+  "profiles": {
+    "arshad": {
+      "skillId": "amzn1.ask.skill.daf07c82-babe-49e8-a9cf-10f0d3a141b5",
+      "skillMetadata": {
+        "src": "skill-package"
+      }
+    }
+  }
+}
